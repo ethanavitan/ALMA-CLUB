@@ -200,6 +200,105 @@
   </a>
 </section>
 
+<!-- FLOOR MAP -->
+<section style="background:#000; padding: 3rem 1.5rem 4rem; border-top: 1px solid #990000;">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <div style="font-family:'Bebas Neue',sans-serif; color:#CC0000; font-size:2.8rem; letter-spacing:0.12em; margin-bottom:0.3rem;">THE <span style="color:#fff;">VENUE</span></div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1.5rem;">Club ALMA · Floor Plan · Hover to explore</div>
+    <div style="position:relative; display:inline-block; width:100%;">
+      <div id="map-tip" style="position:absolute; background:#111; border:1px solid #CC0000; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; letter-spacing:0.05em; padding:6px 10px; pointer-events:none; opacity:0; transition:opacity 0.15s; white-space:nowrap; z-index:10;"></div>
+      <svg style="border:1px solid #CC0000; display:block; width:100%;" viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="520" height="540" fill="#2a2a2a"/>
+        <rect x="20" y="20" width="460" height="100" fill="#141414"/>
+        <!-- ENTRANCE -->
+        <rect x="24" y="26" width="130" height="90" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="ENTRANCE" data-info="Main entrance · Ticket scan &amp; 21+ wristbands"/>
+        <rect x="28" y="30" width="122" height="26" fill="#CC0000" rx="1"/>
+        <text x="89" y="48" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">ENTRANCE</text>
+        <polygon points="76,70 102,70 89,88" fill="#CC0000" opacity="0.85"/>
+        <!-- PHOTO BOOTH -->
+        <rect x="160" y="26" width="200" height="90" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="PHOTO BOOTH" data-info="Photo booth · Pose with the ALMA cow 🐄"/>
+        <rect x="164" y="30" width="192" height="26" fill="#CC0000" rx="1"/>
+        <text x="260" y="48" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">PHOTO BOOTH</text>
+        <text x="240" y="90" text-anchor="middle" font-size="30" fill="#CC0000" opacity="0.35">🐄</text>
+        <text x="304" y="84" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#555" letter-spacing="1">POSE WITH</text>
+        <text x="304" y="96" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#555" letter-spacing="1">THE COW</text>
+        <!-- Hallway -->
+        <rect x="362" y="20" width="18" height="120" fill="#141414"/>
+        <text x="371" y="85" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="7" fill="#444" letter-spacing="1" transform="rotate(-90,371,85)">HALLWAY</text>
+        <!-- RESTROOMS -->
+        <rect x="380" y="20" width="100" height="60" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+        <rect x="383" y="23" width="94" height="54" fill="#1a1a1a" rx="2" class="map-spot" data-label="RESTROOMS" data-info="Restrooms · Long hallway connecting to main area"/>
+        <text x="430" y="43" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="11" fill="#555" letter-spacing="2">RESTROOMS</text>
+        <text x="430" y="60" text-anchor="middle" font-size="12" fill="#444">🚻</text>
+        <rect x="380" y="80" width="100" height="40" fill="#2a2a2a"/>
+        <!-- BAR -->
+        <rect x="20" y="140" width="72" height="220" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="BAR" data-info="Full bar service · Cocktails, shots &amp; beer"/>
+        <rect x="24" y="144" width="64" height="24" fill="#CC0000" rx="1"/>
+        <text x="56" y="161" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">BAR</text>
+        <line x1="30" y1="178" x2="86" y2="178" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="198" x2="86" y2="198" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="218" x2="86" y2="218" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="238" x2="86" y2="238" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="258" x2="86" y2="258" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="278" x2="86" y2="278" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="298" x2="86" y2="298" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="318" x2="86" y2="318" stroke="#2a2a2a" stroke-width="1"/>
+        <circle cx="56" cy="200" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="238" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="276" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="314" r="11" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/>
+        <!-- DANCE FLOOR -->
+        <rect x="92" y="140" width="248" height="220" fill="#111" stroke="#CC0000" stroke-width="1" rx="2" class="map-spot" data-label="DANCE FLOOR" data-info="Main dance floor · House music all night"/>
+        <line x1="92" y1="175" x2="340" y2="175" stroke="#181818" stroke-width="1"/><line x1="92" y1="210" x2="340" y2="210" stroke="#181818" stroke-width="1"/><line x1="92" y1="245" x2="340" y2="245" stroke="#181818" stroke-width="1"/><line x1="92" y1="280" x2="340" y2="280" stroke="#181818" stroke-width="1"/><line x1="92" y1="315" x2="340" y2="315" stroke="#181818" stroke-width="1"/>
+        <line x1="127" y1="140" x2="127" y2="360" stroke="#181818" stroke-width="1"/><line x1="162" y1="140" x2="162" y2="360" stroke="#181818" stroke-width="1"/><line x1="197" y1="140" x2="197" y2="360" stroke="#181818" stroke-width="1"/><line x1="232" y1="140" x2="232" y2="360" stroke="#181818" stroke-width="1"/><line x1="267" y1="140" x2="267" y2="360" stroke="#181818" stroke-width="1"/><line x1="302" y1="140" x2="302" y2="360" stroke="#181818" stroke-width="1"/>
+        <text x="216" y="256" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="20" fill="#CC0000" opacity="0.18" letter-spacing="3">DANCE FLOOR</text>
+        <!-- TABLE SECTION -->
+        <rect x="340" y="140" width="70" height="220" fill="#200000" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="TABLE SECTION" data-info="VIP Tables · DM @clubalmamiami to reserve"/>
+        <line x1="344" y1="195" x2="406" y2="195" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="250" x2="406" y2="250" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="305" x2="406" y2="305" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/>
+        <text x="375" y="250" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="15" fill="#CC0000" opacity="0.8" letter-spacing="3" transform="rotate(-90,375,250)">TABLE SECTION</text>
+        <text x="465" y="252" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#444" letter-spacing="1" transform="rotate(-90,465,252)">WALL</text>
+        <!-- DJ BOOTH -->
+        <text x="56" y="392" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#444" letter-spacing="1">WALL</text>
+        <rect x="92" y="362" width="248" height="66" fill="#1a1a1a" stroke="#CC0000" stroke-width="2" rx="2" class="map-spot" data-label="DJ BOOTH" data-info="DJ Booth · Valentino · Michael Elli · KBDJ · NotToday"/>
+        <rect x="96" y="366" width="240" height="22" fill="#CC0000" rx="1"/>
+        <text x="216" y="382" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="14" fill="#fff" letter-spacing="3">DJ BOOTH</text>
+        <rect x="108" y="392" width="36" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/><rect x="152" y="392" width="36" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/><rect x="196" y="392" width="48" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+        <circle cx="220" cy="406" r="8" fill="none" stroke="#CC0000" stroke-width="0.5" opacity="0.5"/>
+        <rect x="252" y="392" width="48" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+        <circle cx="276" cy="406" r="8" fill="none" stroke="#CC0000" stroke-width="0.5" opacity="0.5"/>
+        <rect x="308" y="392" width="28" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+        <!-- PATIO ENTRY -->
+        <rect x="340" y="362" width="70" height="66" fill="#141414" stroke="#555" stroke-width="1" rx="2" class="map-spot" data-label="PATIO ENTRY" data-info="Exit to outside patio · Smoking area"/>
+        <text x="375" y="392" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#666" letter-spacing="1">PATIO</text>
+        <text x="375" y="404" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#666" letter-spacing="1">ENTRY</text>
+        <polygon points="368,410 382,410 375,422" fill="#555" opacity="0.8"/>
+        <!-- OUTSIDE PATIO -->
+        <rect x="20" y="448" width="480" height="72" fill="#141414" stroke="#555" stroke-width="1" rx="2" class="map-spot" data-label="OUTSIDE PATIO" data-info="Outside patio · Cigarette smoking only · Vapes permitted indoors"/>
+        <line x1="20" y1="472" x2="500" y2="472" stroke="#1e1e1e" stroke-width="1"/><line x1="20" y1="496" x2="500" y2="496" stroke="#1e1e1e" stroke-width="1"/>
+        <text x="260" y="484" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="16" fill="#444" letter-spacing="4">OUTSIDE PATIO</text>
+        <text x="260" y="500" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="10" fill="#333" letter-spacing="2">CIGARETTE SMOKING AREA</text>
+        <rect x="0" y="520" width="520" height="20" fill="#2a2a2a"/>
+      </svg>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:1rem;">
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#CC0000;flex-shrink:0;"></div>Entrance / DJ Booth / Photo Booth</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#1a1a1a;border:1px solid #CC0000;flex-shrink:0;"></div>Bar / Dance Floor</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#200000;border:1px solid #CC0000;flex-shrink:0;"></div>Table Section</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#141414;border:1px solid #555;flex-shrink:0;"></div>Patio / Smoking</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#2a2a2a;flex-shrink:0;"></div>Walls</div>
+    </div>
+    <div style="margin-top:0.5rem;font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:rgba(255,255,255,0.15);text-transform:uppercase;">Hover over any area for details</div>
+  </div>
+</section>
+
+<script>
+  const mapTip = document.getElementById('map-tip');
+  const mapWrap = mapTip ? mapTip.closest('div[style]') : null;
+  document.querySelectorAll('.map-spot').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('mouseenter', () => {
+      mapTip.innerHTML = '<strong style="color:#CC0000;font-family:Bebas Neue,sans-serif;letter-spacing:0.1em;font-size:14px;">' + el.dataset.label + '</strong><br><span style="color:rgba(255,255,255,0.6);font-size:12px;">' + el.dataset.info + '</span>';
+      mapTip.style.opacity = '1';
+    });
+    el.addEventListener('mousemove', e => {
+      const rect = el.closest('div[style]').getBoundingClientRect();
+      mapTip.style.left = (e.clientX - rect.left + 12) + 'px';
+      mapTip.style.top = (e.clientY - rect.top - 10) + 'px';
+    });
+    el.addEventListener('mouseleave', () => { mapTip.style.opacity = '0'; });
+  });
+</script>
+
 <section class="cta-section">
   <div class="cta-bg"></div>
   <div class="cta-tag">Tickets Available Now</div>
