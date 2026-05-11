@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STRICTLY HOUSE</title>
+<title>IBIZA NIGHT</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --red: #CC0000; --red-dark: #990000; --red-bright: #FF1111;
+    --red: #00dbc7; --red-dark: #009e8f; --red-bright: #00f5e0;
     --black: #000000; --off-black: #0a0a0a; --gray-dark: #111111;
     --gray-mid: #1a1a1a; --white: #FFFFFF; --off-white: #f0f0f0;
   }
@@ -20,7 +20,7 @@
   .nav-cta:hover { background: var(--red-bright); }
 
   .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 7rem 2rem 4rem; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(204,0,0,0.03) 0px, rgba(204,0,0,0.03) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(204,0,0,0.03) 0px, rgba(204,0,0,0.03) 1px, transparent 1px, transparent 60px), radial-gradient(ellipse 80% 60% at 50% 50%, rgba(180,0,0,0.18) 0%, transparent 70%), var(--black); z-index: 0; }
+  .hero-bg { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,219,199,0.03) 0px, rgba(0,219,199,0.03) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(0,219,199,0.03) 0px, rgba(0,219,199,0.03) 1px, transparent 1px, transparent 60px), radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,219,199,0.1) 0%, transparent 70%), var(--black); z-index: 0; }
   .hero-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; position: relative; z-index: 1; }
   .hero-tag::before, .hero-tag::after { content: '—'; margin: 0 0.6rem; opacity: 0.5; }
   .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 18vw, 13rem); line-height: 0.88; letter-spacing: 0.02em; color: var(--white); position: relative; z-index: 1; }
@@ -34,7 +34,7 @@
 
   .details-section { background: var(--gray-dark); border-top: 3px solid var(--red); border-bottom: 3px solid var(--red); padding: 2.5rem 2rem; }
   .details-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; }
-  .detail-item { flex: 1; min-width: 180px; text-align: center; padding: 1rem 2rem; border-right: 1px solid rgba(204,0,0,0.3); }
+  .detail-item { flex: 1; min-width: 180px; text-align: center; padding: 1rem 2rem; border-right: 1px solid rgba(0,219,199,0.3); }
   .detail-item:last-child { border-right: none; }
   .detail-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
   .detail-value { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.08em; color: var(--white); }
@@ -50,12 +50,12 @@
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
   .gallery-item:hover img { transform: scale(1.05); }
 
-  .lineup-section { background: var(--off-black); padding: 5rem 2rem; border-top: 1px solid rgba(204,0,0,0.2); }
+  .lineup-section { background: var(--off-black); padding: 5rem 2rem; border-top: 1px solid rgba(0,219,199,0.2); }
   .lineup-inner { max-width: 700px; margin: 0 auto; }
   .lineup-grid { display: flex; flex-direction: column; margin-top: 2rem; }
   .lineup-row { display: flex; align-items: center; padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .lineup-row:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
-  .lineup-time { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; color: var(--red); min-width: 130px; text-transform: uppercase; }
+  .lineup-time { display: none; }
   .lineup-name { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.08em; color: var(--white); flex: 1; }
   .lineup-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); border: 1px solid var(--red-dark); padding: 0.25rem 0.6rem; opacity: 0.8; }
 
@@ -70,12 +70,12 @@
   .btn-instagram svg { width: 20px; height: 20px; fill: white; }
 
   .cta-section { position: relative; padding: 6rem 2rem; text-align: center; overflow: hidden; }
-  .cta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(180,0,0,0.2) 0%, transparent 70%), var(--black); z-index: 0; }
+  .cta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(0,219,199,0.12) 0%, transparent 70%), var(--black); z-index: 0; }
   .cta-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; position: relative; z-index: 1; }
   .cta-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: 0.06em; line-height: 0.9; color: var(--white); margin-bottom: 2rem; position: relative; z-index: 1; }
   .cta-headline span { color: var(--red); }
 
-  footer { background: var(--gray-dark); border-top: 1px solid rgba(204,0,0,0.25); padding: 2rem; text-align: center; }
+  footer { background: var(--gray-dark); border-top: 1px solid rgba(0,219,199,0.25); padding: 2rem; text-align: center; }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--red); margin-bottom: 0.4rem; }
   .footer-text { font-family: 'Barlow', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.25); }
 
@@ -92,17 +92,17 @@
 
 <nav>
   <div class="nav-logo">CLUB ALMA</div>
-  <a href="https://posh.vip/e/club-alma" class="nav-cta" target="_blank">Get Tickets</a>
+  <a href="https://posh.vip/e/club-alma-1" class="nav-cta" target="_blank">Get Tickets</a>
 </nav>
 
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-tag">Club ALMA Presents</div>
-  <h1 class="hero-title">STRICTLY<span>HOUSE</span></h1>
+  <h1 class="hero-title">IBIZA<span>NIGHT</span></h1>
   <div class="hero-rule"></div>
-  <div class="hero-dates">May 9 · May 16 · May 23 · May 30</div>
+  <div class="hero-dates">May 16th · Club ALMA</div>
   <div class="hero-location">ALMA · 501 Silks Run, Suite 1130 · Hallandale Beach, FL</div>
-  <a href="https://posh.vip/e/club-alma" class="btn-primary" target="_blank">Get Tickets</a>
+  <a href="https://posh.vip/e/club-alma-1" class="btn-primary" target="_blank">Get Tickets</a>
   <div class="hero-scroll">Scroll ↓</div>
 </section>
 
@@ -121,7 +121,7 @@
     <div class="detail-item">
       <div class="detail-label">Music</div>
       <div class="detail-value">House</div>
-      <div class="detail-sub">No mainstream filler</div>
+      <div class="detail-sub">Ibiza house &amp; dance</div>
     </div>
     <div class="detail-item">
       <div class="detail-label">Tickets</div>
@@ -156,32 +156,19 @@
 <section class="lineup-section">
   <div class="lineup-inner">
     <div class="section-heading">THE <span>LINEUP</span></div>
-    <div class="section-sub">Every Saturday · House music all night</div>
+    <div class="section-sub">Club ALMA · Ibiza Night</div>
     <div class="lineup-grid">
       <div class="lineup-row">
-        <div class="lineup-time">10 – 11 PM</div>
         <div class="lineup-name">Valentino</div>
-        <div class="lineup-badge">Opening</div>
       </div>
       <div class="lineup-row">
-        <div class="lineup-time">11 PM – 12 AM</div>
         <div class="lineup-name">Michael Elli</div>
-        <div class="lineup-badge">Mid Set</div>
       </div>
       <div class="lineup-row">
-        <div class="lineup-time">12 – 1 AM</div>
         <div class="lineup-name">KBDJ</div>
-        <div class="lineup-badge">DJ SET</div>
       </div>
       <div class="lineup-row">
-        <div class="lineup-time">1 – 2:30 AM</div>
         <div class="lineup-name">NotToday</div>
-        <div class="lineup-badge">Peak Set</div>
-      </div>
-      <div class="lineup-row">
-        <div class="lineup-time">2:30 AM – Close</div>
-        <div class="lineup-name">All DJs B4B</div>
-        <div class="lineup-badge">Close</div>
       </div>
     </div>
   </div>
@@ -201,25 +188,25 @@
 </section>
 
 <!-- FLOOR MAP -->
-<section style="background:#000; padding: 3rem 1.5rem 4rem; border-top: 1px solid #990000;">
+<section style="background:#000; padding: 3rem 1.5rem 4rem; border-top: 1px solid #009e8f;">
   <div style="max-width: 700px; margin: 0 auto;">
-    <div style="font-family:'Bebas Neue',sans-serif; color:#CC0000; font-size:2.8rem; letter-spacing:0.12em; margin-bottom:0.3rem;">THE <span style="color:#fff;">VENUE</span></div>
+    <div style="font-family:'Bebas Neue',sans-serif; color:#00dbc7; font-size:2.8rem; letter-spacing:0.12em; margin-bottom:0.3rem;">THE <span style="color:#fff;">VENUE</span></div>
     <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1.5rem;">Club ALMA · Floor Plan · Hover to explore</div>
     <div style="position:relative; display:inline-block; width:100%;">
-      <div id="map-tip" style="position:absolute; background:#111; border:1px solid #CC0000; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; letter-spacing:0.05em; padding:6px 10px; pointer-events:none; opacity:0; transition:opacity 0.15s; white-space:nowrap; z-index:10;"></div>
-      <svg style="border:1px solid #CC0000; display:block; width:100%;" viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg">
+      <div id="map-tip" style="position:absolute; background:#111; border:1px solid #00dbc7; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; letter-spacing:0.05em; padding:6px 10px; pointer-events:none; opacity:0; transition:opacity 0.15s; white-space:nowrap; z-index:10;"></div>
+      <svg style="border:1px solid #00dbc7; display:block; width:100%;" viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="520" height="540" fill="#2a2a2a"/>
         <rect x="20" y="20" width="460" height="100" fill="#141414"/>
         <!-- ENTRANCE -->
-        <rect x="24" y="26" width="130" height="90" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="ENTRANCE" data-info="Main entrance · Ticket scan &amp; 21+ wristbands"/>
-        <rect x="28" y="30" width="122" height="26" fill="#CC0000" rx="1"/>
+        <rect x="24" y="26" width="130" height="90" fill="#1a1a1a" stroke="#00dbc7" stroke-width="1.5" rx="2" class="map-spot" data-label="ENTRANCE" data-info="Main entrance · Ticket scan &amp; 21+ wristbands"/>
+        <rect x="28" y="30" width="122" height="26" fill="#00dbc7" rx="1"/>
         <text x="89" y="48" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">ENTRANCE</text>
-        <polygon points="76,70 102,70 89,88" fill="#CC0000" opacity="0.85"/>
+        <polygon points="76,70 102,70 89,88" fill="#00dbc7" opacity="0.85"/>
         <!-- PHOTO BOOTH -->
-        <rect x="160" y="26" width="200" height="90" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="PHOTO BOOTH" data-info="Photo booth · Pose with the ALMA cow 🐄"/>
-        <rect x="164" y="30" width="192" height="26" fill="#CC0000" rx="1"/>
+        <rect x="160" y="26" width="200" height="90" fill="#1a1a1a" stroke="#00dbc7" stroke-width="1.5" rx="2" class="map-spot" data-label="PHOTO BOOTH" data-info="Photo booth · Pose with the ALMA cow 🐄"/>
+        <rect x="164" y="30" width="192" height="26" fill="#00dbc7" rx="1"/>
         <text x="260" y="48" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">PHOTO BOOTH</text>
-        <text x="240" y="90" text-anchor="middle" font-size="30" fill="#CC0000" opacity="0.35">🐄</text>
+        <text x="240" y="90" text-anchor="middle" font-size="30" fill="#00dbc7" opacity="0.35">🐄</text>
         <text x="304" y="84" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#555" letter-spacing="1">POSE WITH</text>
         <text x="304" y="96" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#555" letter-spacing="1">THE COW</text>
         <!-- Hallway -->
@@ -232,31 +219,31 @@
         <text x="430" y="60" text-anchor="middle" font-size="12" fill="#444">🚻</text>
         <rect x="380" y="80" width="100" height="40" fill="#2a2a2a"/>
         <!-- BAR -->
-        <rect x="20" y="140" width="72" height="220" fill="#1a1a1a" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="BAR" data-info="Full bar service · Cocktails, shots &amp; beer"/>
-        <rect x="24" y="144" width="64" height="24" fill="#CC0000" rx="1"/>
+        <rect x="20" y="140" width="72" height="220" fill="#1a1a1a" stroke="#00dbc7" stroke-width="1.5" rx="2" class="map-spot" data-label="BAR" data-info="Full bar service · Cocktails, shots &amp; beer"/>
+        <rect x="24" y="144" width="64" height="24" fill="#00dbc7" rx="1"/>
         <text x="56" y="161" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="#fff" letter-spacing="2">BAR</text>
         <line x1="30" y1="178" x2="86" y2="178" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="198" x2="86" y2="198" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="218" x2="86" y2="218" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="238" x2="86" y2="238" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="258" x2="86" y2="258" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="278" x2="86" y2="278" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="298" x2="86" y2="298" stroke="#2a2a2a" stroke-width="1"/><line x1="30" y1="318" x2="86" y2="318" stroke="#2a2a2a" stroke-width="1"/>
-        <circle cx="56" cy="200" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="238" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="276" r="13" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="314" r="11" fill="#111" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/>
+        <circle cx="56" cy="200" r="13" fill="#111" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="238" r="13" fill="#111" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="276" r="13" fill="#111" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/><circle cx="56" cy="314" r="11" fill="#111" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/>
         <!-- DANCE FLOOR -->
-        <rect x="92" y="140" width="248" height="220" fill="#111" stroke="#CC0000" stroke-width="1" rx="2" class="map-spot" data-label="DANCE FLOOR" data-info="Main dance floor · House music all night"/>
+        <rect x="92" y="140" width="248" height="220" fill="#111" stroke="#00dbc7" stroke-width="1" rx="2" class="map-spot" data-label="DANCE FLOOR" data-info="Main dance floor · House music all night"/>
         <line x1="92" y1="175" x2="340" y2="175" stroke="#181818" stroke-width="1"/><line x1="92" y1="210" x2="340" y2="210" stroke="#181818" stroke-width="1"/><line x1="92" y1="245" x2="340" y2="245" stroke="#181818" stroke-width="1"/><line x1="92" y1="280" x2="340" y2="280" stroke="#181818" stroke-width="1"/><line x1="92" y1="315" x2="340" y2="315" stroke="#181818" stroke-width="1"/>
         <line x1="127" y1="140" x2="127" y2="360" stroke="#181818" stroke-width="1"/><line x1="162" y1="140" x2="162" y2="360" stroke="#181818" stroke-width="1"/><line x1="197" y1="140" x2="197" y2="360" stroke="#181818" stroke-width="1"/><line x1="232" y1="140" x2="232" y2="360" stroke="#181818" stroke-width="1"/><line x1="267" y1="140" x2="267" y2="360" stroke="#181818" stroke-width="1"/><line x1="302" y1="140" x2="302" y2="360" stroke="#181818" stroke-width="1"/>
-        <text x="216" y="256" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="20" fill="#CC0000" opacity="0.18" letter-spacing="3">DANCE FLOOR</text>
+        <text x="216" y="256" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="20" fill="#00dbc7" opacity="0.18" letter-spacing="3">DANCE FLOOR</text>
         <!-- TABLE SECTION -->
-        <rect x="340" y="140" width="70" height="220" fill="#200000" stroke="#CC0000" stroke-width="1.5" rx="2" class="map-spot" data-label="TABLE SECTION" data-info="VIP Tables · DM @clubalmamiami to reserve"/>
-        <line x1="344" y1="195" x2="406" y2="195" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="250" x2="406" y2="250" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="305" x2="406" y2="305" stroke="#CC0000" stroke-width="0.5" opacity="0.3"/>
-        <text x="375" y="250" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="15" fill="#CC0000" opacity="0.8" letter-spacing="3" transform="rotate(-90,375,250)">TABLE SECTION</text>
+        <rect x="340" y="140" width="70" height="220" fill="#002220" stroke="#00dbc7" stroke-width="1.5" rx="2" class="map-spot" data-label="TABLE SECTION" data-info="VIP Tables · DM @clubalmamiami to reserve"/>
+        <line x1="344" y1="195" x2="406" y2="195" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="250" x2="406" y2="250" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/><line x1="344" y1="305" x2="406" y2="305" stroke="#00dbc7" stroke-width="0.5" opacity="0.3"/>
+        <text x="375" y="250" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="15" fill="#00dbc7" opacity="0.8" letter-spacing="3" transform="rotate(-90,375,250)">TABLE SECTION</text>
         <text x="465" y="252" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#444" letter-spacing="1" transform="rotate(-90,465,252)">WALL</text>
         <!-- DJ BOOTH -->
         <text x="56" y="392" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#444" letter-spacing="1">WALL</text>
-        <rect x="92" y="362" width="248" height="66" fill="#1a1a1a" stroke="#CC0000" stroke-width="2" rx="2" class="map-spot" data-label="DJ BOOTH" data-info="DJ Booth · Valentino · Michael Elli · KBDJ · NotToday"/>
-        <rect x="96" y="366" width="240" height="22" fill="#CC0000" rx="1"/>
+        <rect x="92" y="362" width="248" height="66" fill="#1a1a1a" stroke="#00dbc7" stroke-width="2" rx="2" class="map-spot" data-label="DJ BOOTH" data-info="DJ Booth · Valentino · Michael Elli · KBDJ · NotToday"/>
+        <rect x="96" y="366" width="240" height="22" fill="#00dbc7" rx="1"/>
         <text x="216" y="382" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="14" fill="#fff" letter-spacing="3">DJ BOOTH</text>
-        <rect x="108" y="392" width="36" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/><rect x="152" y="392" width="36" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/><rect x="196" y="392" width="48" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
-        <circle cx="220" cy="406" r="8" fill="none" stroke="#CC0000" stroke-width="0.5" opacity="0.5"/>
-        <rect x="252" y="392" width="48" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
-        <circle cx="276" cy="406" r="8" fill="none" stroke="#CC0000" stroke-width="0.5" opacity="0.5"/>
-        <rect x="308" y="392" width="28" height="28" fill="#0f0f0f" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+        <rect x="108" y="392" width="36" height="28" fill="#0f0f0f" stroke="#00dbc7" stroke-width="0.5" rx="1"/><rect x="152" y="392" width="36" height="28" fill="#0f0f0f" stroke="#00dbc7" stroke-width="0.5" rx="1"/><rect x="196" y="392" width="48" height="28" fill="#0f0f0f" stroke="#00dbc7" stroke-width="0.5" rx="1"/>
+        <circle cx="220" cy="406" r="8" fill="none" stroke="#00dbc7" stroke-width="0.5" opacity="0.5"/>
+        <rect x="252" y="392" width="48" height="28" fill="#0f0f0f" stroke="#00dbc7" stroke-width="0.5" rx="1"/>
+        <circle cx="276" cy="406" r="8" fill="none" stroke="#00dbc7" stroke-width="0.5" opacity="0.5"/>
+        <rect x="308" y="392" width="28" height="28" fill="#0f0f0f" stroke="#00dbc7" stroke-width="0.5" rx="1"/>
         <!-- PATIO ENTRY -->
         <rect x="340" y="362" width="70" height="66" fill="#141414" stroke="#555" stroke-width="1" rx="2" class="map-spot" data-label="PATIO ENTRY" data-info="Exit to outside patio · Smoking area"/>
         <text x="375" y="392" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#666" letter-spacing="1">PATIO</text>
@@ -271,9 +258,9 @@
       </svg>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:1rem;">
-      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#CC0000;flex-shrink:0;"></div>Entrance / DJ Booth / Photo Booth</div>
-      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#1a1a1a;border:1px solid #CC0000;flex-shrink:0;"></div>Bar / Dance Floor</div>
-      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#200000;border:1px solid #CC0000;flex-shrink:0;"></div>Table Section</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#00dbc7;flex-shrink:0;"></div>Entrance / DJ Booth / Photo Booth</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#1a1a1a;border:1px solid #00dbc7;flex-shrink:0;"></div>Bar / Dance Floor</div>
+      <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#002220;border:1px solid #00dbc7;flex-shrink:0;"></div>Table Section</div>
       <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#141414;border:1px solid #555;flex-shrink:0;"></div>Patio / Smoking</div>
       <div style="display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);"><div style="width:12px;height:12px;background:#2a2a2a;flex-shrink:0;"></div>Walls</div>
     </div>
@@ -287,7 +274,7 @@
   document.querySelectorAll('.map-spot').forEach(el => {
     el.style.cursor = 'pointer';
     el.addEventListener('mouseenter', () => {
-      mapTip.innerHTML = '<strong style="color:#CC0000;font-family:Bebas Neue,sans-serif;letter-spacing:0.1em;font-size:14px;">' + el.dataset.label + '</strong><br><span style="color:rgba(255,255,255,0.6);font-size:12px;">' + el.dataset.info + '</span>';
+      mapTip.innerHTML = '<strong style="color:#00dbc7;font-family:Bebas Neue,sans-serif;letter-spacing:0.1em;font-size:14px;">' + el.dataset.label + '</strong><br><span style="color:rgba(255,255,255,0.6);font-size:12px;">' + el.dataset.info + '</span>';
       mapTip.style.opacity = '1';
     });
     el.addEventListener('mousemove', e => {
@@ -303,12 +290,12 @@
   <div class="cta-bg"></div>
   <div class="cta-tag">Tickets Available Now</div>
   <div class="cta-headline">DON'T MISS<br><span>THE NIGHT.</span></div>
-  <a href="https://posh.vip/e/club-alma" class="btn-primary" target="_blank" style="font-size:1.4rem; padding: 1.1rem 4rem;">Get Tickets on POSH</a>
+  <a href="https://posh.vip/e/club-alma-1" class="btn-primary" target="_blank" style="font-size:1.4rem; padding: 1.1rem 4rem;">Get Tickets on POSH</a>
 </section>
 
 <footer>
-  <div class="footer-logo">STRICTLY HOUSE</div>
-  <div class="footer-text">Club ALMA · 501 Silks Run, Suite 1130, Hallandale Beach, FL 33009 · Every Saturday in May 2025</div>
+  <div class="footer-logo">IBIZA NIGHT</div>
+  <div class="footer-text">Club ALMA · 501 Silks Run, Suite 1130, Hallandale Beach, FL 33009 · Club ALMA · Hallandale Beach</div>
 </footer>
 
 </body>
